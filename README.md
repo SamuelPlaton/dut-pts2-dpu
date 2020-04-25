@@ -1,11 +1,11 @@
 # dut-pts2-dpu
 
-**Nom du projet :** DPU   
-**Type du projet :** Application Java avec Base de données   
-**Charge de travail :** Cahier des charges, conception, développement, tests, documentation et entretien avec le client    
-**Durée :** 2 mois    
-**Equipe :** 7 personnes    
-**Rôle :** Chef de projet, programmeur du moteur Java et de la base de données   
-**But du livrable :** Aider le client à récolter les contraintes et préférences des professeurs afin de lui faciliter la création d'emploi du temps       
-**Classement :** 2ème sur 16 projets    
-**Lien :** http://samuelplaton.com/dpu/
+**Fonctionnalité de cette partie :** Parse le contenu d'un fichier .txt afin de récupérer des données (Identité, adresse, e-mail...)
+**Nom du projet :** Extraction et parsing des données d'un fichier .pdf   
+**Type du projet :** Ajout de plugins C++ Qt5 à un existant   
+**Charge de travail :** Entretiens avec une entreprise, réflexion par soi-même, maniement de librairies...       
+**Durée :** 7 mois      
+**Equipe :** 4 personnes       
+**But du livrable :** Pouvoir récupérer le contenu d'une facture .pdf sous forme de texte et récupérer les informations nécéssaires       
+**Classement :** En cours       
+**Lien :** http://samuelplaton.com/c-developpement-de-plugins/
