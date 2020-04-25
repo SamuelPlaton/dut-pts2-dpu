@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="507.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.editConstraintController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="414.0" style="-fx-background-color: #1971ba;">
+         <children>
+            <Label text="Gérer une contrainte" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <DatePicker fx:id="DPchoosedDate" layoutX="144.0" layoutY="110.0" prefHeight="30.0" prefWidth="204.0" />
+      <Label layoutX="59.0" layoutY="112.0" text="Jour :" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="CR11" layoutX="59.0" layoutY="152.0" mnemonicParsing="false" text="8h - 10h" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CR21" layoutX="59.0" layoutY="185.0" mnemonicParsing="false" text="14h - 16h" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CR12" layoutX="219.0" layoutY="152.0" mnemonicParsing="false" text="10h15 - 12h15" AnchorPane.leftAnchor="219.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CR22" layoutX="219.0" layoutY="185.0" mnemonicParsing="false" text="16h15 - 18h15" AnchorPane.leftAnchor="219.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="65.0" layoutY="229.0" text="Type :" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CBtype" layoutX="158.0" layoutY="229.0" prefHeight="26.0" prefWidth="192.0" AnchorPane.leftAnchor="158.0" />
+      <Label layoutX="65.0" layoutY="276.0" text="Durée :" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CBduree" layoutX="158.0" layoutY="276.0" onAction="#onDureeChoosed" prefHeight="26.0" prefWidth="192.0" AnchorPane.leftAnchor="158.0" />
+      <Label fx:id="repetition" layoutX="65.0" layoutY="325.0" text="Tous les :" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CBtousLes" layoutX="158.0" layoutY="325.0" prefHeight="26.0" prefWidth="192.0" AnchorPane.leftAnchor="158.0" />
+      <Text fx:id="erreurFin" fill="RED" layoutX="93.0" layoutY="418.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le jour de fin doit être après le premier jour" />
+      <ImageView fx:id="information" fitHeight="26.0" fitWidth="25.0" layoutX="24.0" layoutY="459.0" onMouseClicked="#onInformationClicked" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Data/img/info.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="ajouter" alignment="CENTER" layoutX="246.0" layoutY="458.0" mnemonicParsing="false" onAction="#onAjouterPressed" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #E6EBF4; -fx-text-fill: black; -fx-border-color: black; -fx-border-radius: 100PX; -fx-background-radius: 100PX; -fx-border-color: green;" text="Ajouter">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="annuler" alignment="CENTER" layoutX="88.0" layoutY="458.0" mnemonicParsing="false" onAction="#onAnnulerPressed" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #E6EBF4; -fx-text-fill: black; -fx-border-color: black; -fx-border-radius: 100PX; -fx-background-radius: 100PX;" text="Annuler">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="jourDeFin" layoutX="65.0" layoutY="374.0" text="Jour de fin :" AnchorPane.leftAnchor="59.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DPendDate" layoutX="158.0" layoutY="372.0" prefHeight="30.0" prefWidth="192.0" AnchorPane.leftAnchor="158.0" />
+      <Text fx:id="erreurChamp" fill="RED" layoutX="99.0" layoutY="220.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le jour ou le créneau n'ont pas été choisi" />
+      <Text fx:id="erreurConstruit" fill="RED" layoutX="89.0" layoutY="445.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ce jour est dans une semaine déja construite" />
+      <Label layoutX="59.0" layoutY="69.0" text="Nom :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomTextField" layoutX="145.0" layoutY="70.0" prefHeight="26.0" prefWidth="204.0" />
+   </children>
+</AnchorPane>

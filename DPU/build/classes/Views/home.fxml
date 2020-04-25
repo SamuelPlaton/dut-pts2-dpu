@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.homeController">
+   <children>
+      <Pane layoutY="-5.0" prefHeight="708.0" prefWidth="250.0" style="-fx-background-color: #1971BA;">
+         <children>
+            <Label fx:id="leMois" alignment="CENTER" layoutX="157.0" layoutY="134.0" prefHeight="27.0" prefWidth="87.0" text="Septembre" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="IVMoisSwipeL" fitHeight="25.0" fitWidth="25.0" layoutX="125.0" layoutY="135.0" onMouseClicked="#onIVMoisSwipeLClicked" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@/fleche_droite.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></Pane>
+      <Label fx:id="LabelUser" layoutX="460.0" layoutY="14.0" text="Prenom_Nom">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="IVdeconnexion" fitHeight="30.0" fitWidth="30.0" layoutX="950.0" layoutY="10.0" onMouseClicked="#onIVdeconnexionClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/deconnexion.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="50.0" prefHeight="0.0" prefWidth="1000.0" style="-fx-background-color: BLACK;" />
+      <Label layoutX="477.0" layoutY="61.0" text="Accueil">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="IVSwipeR" fitHeight="50.0" fitWidth="50.0" layoutX="920.0" layoutY="371.0" onMouseClicked="#onIVSwipeRClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/fleche_droite.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IVSwipeL" fitHeight="50.0" fitWidth="50.0" layoutX="38.0" layoutY="371.0" onMouseClicked="#onIVSwipeLClicked" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@/fleche_droite.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ButtonAdd" layoutX="394.0" layoutY="629.0" mnemonicParsing="false" onAction="#onButtonAjouterClicked" prefHeight="30.0" prefWidth="88.0" style="-fx-border-radius: 100px; -fx-background-radius: 100px; -fx-border-color: black; -fx-text-fill: black;" text="Ajouter" />
+      <Button fx:id="ButtonConsult" layoutX="561.0" layoutY="629.0" mnemonicParsing="false" onAction="#onButtonConsulterClicked" prefHeight="30.0" prefWidth="88.0" style="-fx-border-radius: 100px; -fx-background-radius: 100px; -fx-border-color: black; -fx-text-fill: black;" text="Consulter" />
+      <ImageView fx:id="IVInformation" fitHeight="27.0" fitWidth="31.0" layoutX="955.0" layoutY="645.0" onMouseClicked="#onIVInformationClicked" opacity="0.37" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0">
+         <image>
+            <Image url="@/info.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="leGridPane" layoutX="355.0" layoutY="186.0" prefHeight="400.0" prefWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Rectangle fx:id="Ven22" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Rectangle fx:id="Jeu22" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Rectangle fx:id="Mer22" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Rectangle fx:id="Mar22" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Rectangle fx:id="Lun22" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Rectangle fx:id="Ven21" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Rectangle fx:id="Ven12" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Rectangle fx:id="Jeu12" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Rectangle fx:id="Jeu21" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Rectangle fx:id="Mer21" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Rectangle fx:id="Mar12" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Rectangle fx:id="Lun12" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.rowIndex="2" />
+            <Rectangle fx:id="Mer12" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="7" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Rectangle fx:id="Ven11" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Rectangle fx:id="Jeu11" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="6" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="5" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="4" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="3" />
+            <Rectangle fx:id="Mer11" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#4c4c4c" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Rectangle fx:id="Mar11" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.rowIndex="1" />
+            <Rectangle fx:id="Mar21" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Rectangle fx:id="Lun21" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.rowIndex="3" />
+            <Rectangle fx:id="Lun11" arcHeight="10.0" arcWidth="10.0" fill="#21cc45" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#d3dfeb" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="90.0" GridPane.columnIndex="2" />
+            <Label fx:id="Lundi" text="Lun" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Mardi" text="Mar" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Dimanche" text="Dim" GridPane.columnIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Samedi" text="Sam" GridPane.columnIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Vendredi" text="Ven" GridPane.columnIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Jeudi" text="Jeu" GridPane.columnIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Mercredi" text="Mer" GridPane.columnIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="8h -10h" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="10h - 12h" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="14h - 16h" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="16h - 18h" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow radius="4.75" width="0.0" />
+         </effect>
+      </GridPane>
+      <Label layoutX="455.0" layoutY="128.0" text="Semaine">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="leNumeroDeSemaine" layoutX="555.0" layoutY="128.0" text="01">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lAnnee" layoutX="808.0" layoutY="131.0" text="2017">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="IVAnneeSwipeL" fitHeight="25.0" fitWidth="25.0" layoutX="776.0" layoutY="131.0" onMouseClicked="#onIVAnneeSwipeLClicked" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@/fleche_droite.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IVAnneeSwipeR" fitHeight="25.0" fitWidth="25.0" layoutX="855.0" layoutY="131.0" onMouseClicked="#onIVAnneeSwipeRClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/fleche_droite.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IVMoisSwipeR" fitHeight="25.0" fitWidth="25.0" layoutX="252.0" layoutY="131.0" onMouseClicked="#onIVMoisSwipeRClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/fleche_droite.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="changePassButton" layoutX="731.0" layoutY="12.0" mnemonicParsing="false" onAction="#onChangePassClicked" style="-fx-background-radius: 100px; -fx-border-radius: 100px; -fx-border-color: black;" text="Changer de mot de passe" />
+   </children>
+</AnchorPane>
